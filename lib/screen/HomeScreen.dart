@@ -5,6 +5,7 @@ import 'package:test_provider/screen/cart_page.dart';
 import 'package:test_provider/screen/coldbrew.dart';
 import 'package:test_provider/screen/my_list_screen.dart';
 import 'package:test_provider/screen/starBucks.dart';
+import 'package:test_provider/screen/userPage.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -52,17 +53,24 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         backgroundColor: Color.fromARGB(255, 30, 26, 26),
         actions: [
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15.0),
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(15.0),
-              child: Image.network(
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqVyiI1XClbT2Ue-7CGVAp8sKoqe_068R9zw&usqp=CAU',
-              ),
-            ),
-          ),
+         Card(
+  shape: RoundedRectangleBorder(
+    borderRadius: BorderRadius.circular(15.0),
+  ),
+  child: ClipRRect(
+    borderRadius: BorderRadius.circular(15.0),
+    child: GestureDetector(
+      onTap: () {
+       Navigator.push(context, MaterialPageRoute(builder:  (context) =>  user_page(),));
+      },
+      child: Image.network(
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqVyiI1XClbT2Ue-7CGVAp8sKoqe_068R9zw&usqp=CAU',
+        fit: BoxFit.cover, // You might want to add BoxFit.cover to the image
+      ),
+    ),
+  ),
+),
+
         ],
       ),
       backgroundColor: Color.fromARGB(255, 26, 25, 25),

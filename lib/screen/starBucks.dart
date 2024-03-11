@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class StarbucksCard extends StatelessWidget {
@@ -84,7 +83,7 @@ class StarbucksCard extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      Text(
+                      const Text(
                         'Dalogana Coffee',
                         style: TextStyle(color: Colors.white),
                       ),
@@ -122,7 +121,7 @@ class StarbucksCard extends StatelessWidget {
                   ),
                 ),
               ),
-                            Card(
+              Card(
                 color: Colors.black38,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -174,7 +173,7 @@ class StarbucksCard extends StatelessWidget {
                   ),
                 ),
               ),
-                            Card(
+              Card(
                 color: Colors.black38,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -226,7 +225,7 @@ class StarbucksCard extends StatelessWidget {
                   ),
                 ),
               ),
-                            Card(
+              Card(
                 color: Colors.black38,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -278,7 +277,7 @@ class StarbucksCard extends StatelessWidget {
                   ),
                 ),
               ),
-                            Card(
+              Card(
                 color: Colors.black38,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),

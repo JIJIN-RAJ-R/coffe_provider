@@ -27,7 +27,13 @@ class CartPage extends StatelessWidget {
             child: ListTile(
               // leading: Image.network(),
               title: Text(coffe.title),
-              subtitle: Text('Quantity: ${coffe.quantity}'),
+              subtitle: Container(child: Row(
+                children: [
+                  
+                  Text('Quantity: ${coffe.quantity}'),
+                ],
+              )),
+              
             ),
           );
         },

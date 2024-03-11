@@ -15,12 +15,12 @@ class _MyListScreenState extends State<MyListScreen> {
     final myList = context.watch<CoffeProvider>().myList;
     return Scaffold(
       appBar: AppBar(
+         backgroundColor: Color.fromARGB(255, 30, 26, 26),
         
-              // backgroundColor: const Color.fromARGB(0, 94, 91, 91),
 
-        title: Text("My List FAV (${myList.length})",style: TextStyle(color: Colors.white),),
+        title: Text("My FAV LIST (${myList.length})",style: TextStyle(color: Colors.white),),
       ),
-      backgroundColor: const Color.fromARGB(96, 94, 91, 91),
+ backgroundColor: Color.fromARGB(255, 30, 26, 26),
       body: ListView.builder(
           itemCount: myList.length,
           itemBuilder: (_, index) {
