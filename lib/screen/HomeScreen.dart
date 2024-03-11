@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var moviesProvider = context.watch<MovieProvider>();
+    var moviesProvider = context.watch<CoffeProvider>();
     var myList = moviesProvider.myList;
 
     // Get the total count of items in the favorites list
@@ -218,7 +218,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.orange,
-        unselectedItemColor: Colors.grey,
+        // unselectedItemColor: Colors.orange,
+
         selectedLabelStyle: const TextStyle(color: Colors.orange),
         unselectedLabelStyle: TextStyle(color: Colors.grey),
         backgroundColor: Color.fromARGB(255, 30, 26, 26),
@@ -285,12 +286,12 @@ class _HomeScreenState extends State<HomeScreen> {
           setState(() {
             _selectedIndex = index;
             if (_selectedIndex == 2) {
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const CartPage()),
               );
             } else if (_selectedIndex == 1) {
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const MyListScreen()),
               );

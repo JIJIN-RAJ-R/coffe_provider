@@ -8,7 +8,7 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var myList = context.watch<MovieProvider>().myList;
+    var myList = context.watch<CoffeProvider>().myList;
 
     return Scaffold(
       appBar: AppBar(

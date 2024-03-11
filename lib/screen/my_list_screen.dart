@@ -12,11 +12,11 @@ class MyListScreen extends StatefulWidget {
 class _MyListScreenState extends State<MyListScreen> {
   @override
   Widget build(BuildContext context) {
-    final myList = context.watch<MovieProvider>().myList;
+    final myList = context.watch<CoffeProvider>().myList;
     return Scaffold(
       appBar: AppBar(
         
-              backgroundColor: const Color.fromARGB(0, 94, 91, 91),
+              // backgroundColor: const Color.fromARGB(0, 94, 91, 91),
 
         title: Text("My List FAV (${myList.length})",style: TextStyle(color: Colors.white),),
       ),
@@ -41,7 +41,7 @@ class _MyListScreenState extends State<MyListScreen> {
                     style: TextStyle(color: Colors.red),
                   ),
                   onPressed: () {
-                    context.read<MovieProvider>().removeFromList(currentCoffe);
+                    context.read<CoffeProvider>().removeFromList(currentCoffe);
                   },
                 ),
               ),

@@ -1,6 +1,6 @@
-// provider/movie_provider.dart
+// provider/Coffe_provider.dart
 import 'package:flutter/material.dart';
-import 'package:test_provider/model/Coffe.dart';
+import 'package:test_provider/model/model.dart';
 import 'dart:math';
 
 // A list of coffes with titles, runtimes, and image URLs
@@ -48,7 +48,7 @@ final List<Coffe> initialData = [
   ),
 ];
 
-class MovieProvider with ChangeNotifier {
+class CoffeProvider with ChangeNotifier {
   // All coffes (that will be displayed on the Home screen)
   final List<Coffe> _coffes = initialData;
   
